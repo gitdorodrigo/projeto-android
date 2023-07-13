@@ -1,0 +1,240 @@
+
+/* Define a codificação de caracteres como UTF-8 */
+@charset "UTF-8";
+
+/* Importa a fonte Bebas Neue do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Define a fonte personalizada 'android' */
+@font-face {
+font-family: android;
+src: url(../fontes/idroid.otf) format(opentype);
+font-weight: normal;
+}
+
+/* Define as variáveis de cor e fonte */
+:root {
+--cor0: #c5ebd6;
+--cor1: #83e1ad;
+--cor2: #3ddc84;
+--cor3: #2fa866;
+--cor4: #1a5c37;
+--cor5: #063d1e;
+--fonte-padrao: Arial, Helvetica, sans-serif;
+--fonte-destaque: 'Bebas Neue'cursive;
+--fonte-android: 'Android', cursive;
+}
+
+/* Zera as margens e o preenchimento de todos os elementos */
+
+*{
+margin: 0px;
+padding: 0px;
+}
+/* Estilo do corpo do documento */
+body {
+background-color: var(--cor0);
+font-family: var(--fonte-padrao);
+}
+
+/* Estilização dos links externos */
+a.externo::after {
+content: '\00a0\1f517';
+}
+
+/* Estilização do cabeçalho */
+header {
+background-image: linear-gradient(to bottom, var(--cor3), var(--cor5));
+min-height: 150px;
+text-align: center;
+padding-top: 40px;
+}
+
+/* Estilização do título do cabeçalho */
+header>h1 {
+color: white;
+font-family: var(--fonte-destaque);
+font-family: var(--fonte-padrao);
+padding: 20px;
+text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.514);
+font-weight: normal;
+}
+
+/* Estilização do parágrafo do cabeçalho */
+header>p {
+font-family: var(--fonte-padrao);
+font-size: 1.2em;
+color: white;
+max-width: 500px;
+padding-right: 10px;
+padding-left: 10px;
+margin-bottom: 20px;
+margin: auto;
+text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.514);
+}
+
+/* Estilização da barra de navegação */
+nav {
+background-color: var(--cor5);
+padding: 10px;
+box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.192);
+}
+
+/* Estilização dos links da barra de navegação */
+nav>a {
+color: var(--cor1);
+padding: 10px;
+border-radius: 5px;
+text-decoration: none;
+font-weight: bold;
+transition-duration: 0.5s;
+}
+
+/* Estilização dos links da barra de navegação ao passar o mouse */
+nav>a:hover {
+color: var(--cor5);
+background-color: var(--cor3);
+}
+
+/* Estilização do conteúdo principal */
+main {
+min-width: 300px;
+max-width: 1000px;
+margin: auto;
+margin-bottom: 30px;
+padding: 20px;
+background-color: white;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.466);
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+}
+
+/* Estilização do título principal */
+main h1 {
+color: var(--cor5);
+font-family: var(--fonte-android);
+font-weight: normal;
+font-size: 1.8em;
+}
+
+/* Estilização do título secundário */
+main h2 {
+font-family: var(--fonte-android);
+color: var(--cor4);
+font-size: 1.3em;
+font-weight: normal;
+columns: var(--cor4);
+background-image: linear-gradient(to right, var(--cor1), transparent);
+text-indent: 8px;
+}
+
+/* Estilização dos parágrafos */
+main p {
+margin: 15px 0px;
+text-align: justify;
+text-indent: 30px;
+font-size: 1em;
+line-height: 2em;
+}
+
+/* Estilização das imagens */
+main img {
+width: 100%;
+}
+
+/* Estilização de texto em negrito */
+main strong {
+color: var(--cor4);
+font-weight: bold;
+padding: 2px 6px;
+}
+
+/* Estilização dos links dentro do conteúdo principal */
+main a {
+text-decoration: none;
+font-weight: bold;
+color: var(--cor5);
+background-color: var(--cor1);
+padding: 2px 6px;
+}
+
+/* Estilização dos links dentro do conteúdo principal ao passar o mouse */
+main a:hover {
+text-decoration: underline;
+color: var(--cor4);
+}
+
+/* Estilização das imagens pequenas */
+main img.pequena {
+max-width: 350px;
+display: block;
+margin: auto;
+}
+
+/* Estilização da div de vídeo */
+div.video {
+background-color: var(--cor5);
+margin: 0px -20px 30px -20px;
+padding: 20px;
+padding-bottom: 56.5%;
+position: relative;
+}
+
+/* Estilização do iframe dentro da div de vídeo */
+div.video > iframe {
+position: absolute;
+top: 5%;
+left: 5%;
+width: 90%;
+height: 90%;
+border-radius: 5px;
+}
+
+/* Estilização da barra lateral */
+aside {
+background-color: var(--cor1);
+padding: 10px;
+border-radius: 10px;
+}
+
+/* Estilização do título da barra lateral */
+aside>h3 {
+background-color: var(--cor4);
+color: white;
+font-family: var(--fonte-android);
+font-weight: normal;
+padding: 10px;
+margin: -10px -10px 0 -10px;
+border-radius: 10px 10px 0px 0px;
+box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.280);
+}
+
+/* Estilização da lista da barra lateral */
+aside>ul {
+list-style-type: '\2714\0a0\0a0';
+list-style-position: inside;
+columns: 2;
+}
+
+/* Estilização do rodapé */
+footer {
+background-image: linear-gradient(to right, var(--cor1), transparent);
+color: black;
+text-align: center;
+font-size: .8em;
+padding: 5px;
+font-weight: bold;
+}
+
+/* Estilização dos links no rodapé */
+footer a {
+color: black;
+text-decoration: none;
+}
+
+/* Estilização dos links no rodapé ao passar o mouse */
+footer a:hover {
+text-decoration: underline;
+color: var(--cor1);
+background-color: var(--cor3);
+}
